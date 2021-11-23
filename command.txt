@@ -1,0 +1,23 @@
+use assignment
+
+db.users.insert({firstname:"g1",lastname:"a1",gender:"male",age:"21"}})
+
+db.users.insertMany([{firstname:"g2",lastname:"a2",gender:"male",age:"22"},{firstname:"g3",lastname:"a3",gender:"female",age:"23"}])
+
+db.users.find().pretty()
+
+db.users.findOne({age:"21"})
+
+db.users.update({age:"22"},{$set:{country:"India"}})
+
+db.users.updateMany({gender:"Male"},{$set:{age:"30"}})
+
+db.users.remove({gender:"Female"})
+
+db.users.remove({age:"30"},1)
+
+db.users.deleteOne({firstname:"g3"})
+
+db.users.deleteMany({})
+
+ db.users.drop()
