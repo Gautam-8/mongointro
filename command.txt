@@ -24,6 +24,18 @@ db.users.deleteMany({})
 
  // Mongoose assignment //
 
+1) db.movies.find({movie_name:{$eq:"Admiral"}}).pretty()
+
+2) db.movies.find({movie_name:{$ne:"Admiral"}}).pretty()
+
+3)db.movies.find({budget:{$gte:12000}}).pretty() 
+
+4)db.movies.find({budget:{$lte:9999}}).pretty() 
+
+5)db.movies.find({$and: [{budget:{$gt:10000}},{production_year:{$gte:2000}}]}).pretty().limit(10)
+ 
+6)db.movies.find({$or: [{budget:{$gt:10000}},{production_year:{$gte:2000}}]}).pretty().limit(10)
+
 7) db.movies.find({$and: [{budget:{$not:{$gt:10000}}},{production_year:{$not:{$gte:2000}}}]}).pretty().limit(10)
 
 8) db.movies.find({$or: [{budget:{$not:{$gt:10000}}},{production_year:{$not:{$gte:2000}}}]}).pretty().limit(10)
