@@ -40,7 +40,7 @@ app.get("/movies",async(req,res) =>{
 
     try{
     const movies = await Movie.find({}).lean().exec();
-    return res.status(201).send(movies);
+    return res.status(201).send({movies});
     }
     catch(e){
       return  res.status(500).send({status:e.message})
