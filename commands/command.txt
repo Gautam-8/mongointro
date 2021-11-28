@@ -1,4 +1,4 @@
- assignment
+ assignment/////
 
 db.users.insert({firstname:"g1",lastname:"a1",gender:"male",age:"21"}})
 
